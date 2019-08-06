@@ -10,12 +10,13 @@ _Zapscloud Storage API Client_
         authsecret: ' '
     })
 
-    var stubucket = 'students'
 
 **Snippet for Storage Bucket Create**
 
 > Create Bucket
 
+    var stubucket = 'students'
+    
     zapsstorage.createBucket(stubucket, 'Student Files Bucket')
     .then(function (response) {
         console.log('Response Insert', response)
