@@ -65,7 +65,7 @@ _Zapscloud Storage API Client_
     });
 
 
-**Snippet for Multiple Document retive**
+**Snippet for File Download**
 
 > Download a file in given folder using file key
 
@@ -77,9 +77,9 @@ _Zapscloud Storage API Client_
         console.log('Error Download', err)
     });
 
-**Snippet for Remove Uploaded File]**
+**Snippet for Remove Uploaded File**
 
-> Download a file in given folder using file key
+> Remove uploaded file using file id
 
     zapsstorage.removeFile(stubucket, imagesfolder, '1565018591686-merchant_shop.png')
     .then(function (response) {
