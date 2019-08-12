@@ -10,39 +10,11 @@ _Zapscloud Storage API Client_
         authsecret: ' '
     })
 
-
-**Snippet for Storage Bucket Create**
-
-> Create Bucket
-
-    var stubucket = 'students'
-    
-    zapsstorage.createBucket(stubucket, 'Student Files Bucket')
-    .then(function (response) {
-        console.log('Response Insert', response)
-    })
-    .catch(function (err) {
-        console.log('Error Insert', err)
-    });
-
-**Snippet for Folder Create**
-
-> Create Folder
-
-    var imagesfolder = 'images'
-    
-    zapsstorage.createFolder (stubucket, imagesfolder, 'Folder to store Images in Student Bucket') 
-    .then(function (response) {
-        console.log('Create Folder Response', response)
-    })
-    .catch(function (err) {
-        console.log('Error Folder Create', err)
-    });
-
-
 **Snippet for File Upload**
 
-> Upload a file with public access
+> Upload a file with public access url
+
+    var imagesfolder = 'students/images'
 
     zapsstorage.uploadFile(stubucket, imagesfolder, '/data/images/merchant_shop.png', true)
     .then(function (response) {
@@ -55,22 +27,33 @@ _Zapscloud Storage API Client_
 
 **Snippet for Get File Details**
 
-> Get File Details by Uploaded File Name
+> Get File Details by Uploaded File 
 
-    zapsstorage.getFileDetail(stubucket, imagesfolder, '1565018681600-merchant_shop.png')
+    zapsstorage.getFileDetail(imagesfolder+'merchant_shop.png')
     .then(function (response) {
-        console.log('Response Insert', response)
+        console.log('Response File Details', response)
     })
     .catch(function (err) {
         console.log('Error Insert', err)
     });
 
 
+**Snippet for Get File List**
+
+> Get File Details by Uploaded File 
+    zapsstorage.getFileList(imagesfolder)
+    .then(function (response) {
+        console.log('Response File & Folder List', response)
+    })
+    .catch(function (err) {
+        console.log('Error Insert', err)
+    });
+
 **Snippet for File Download**
 
-> Download a file in given folder using file key
+> Download a file in given folder
 
-    zapsstorage.getFile('students/images/1565018591686-merchant_shop.png','/download/images')
+    zapsstorage.getFile(imagesfolder+'merchant_shop.png','/download/images')
     .then(function (response) {
         console.log('Download Response', response)
     })
@@ -82,7 +65,7 @@ _Zapscloud Storage API Client_
 
 > Remove uploaded file using file id
 
-    zapsstorage.removeFile(stubucket, imagesfolder, '1565018591686-merchant_shop.png')
+    zapsstorage.removeFile(imagesfolder+'merchant_shop.png')
     .then(function (response) {
         console.log('Response Remove File', response)
     })
