@@ -41,6 +41,7 @@ _Zapscloud Storage API Client_
 **Snippet for Get File List**
 
 > Get File Details by Uploaded File 
+
     zapsstorage.getFileList(imagesfolder)
     .then(function (response) {
         console.log('Response File & Folder List', response)
