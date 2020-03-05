@@ -16,7 +16,7 @@ _Zapscloud Storage API Client_
 
     var imagesfolder = 'students/images'
 
-    zapsstorage.uploadFile(stubucket, imagesfolder, '/data/images/merchant_shop.png', true)
+    zapsstorage.uploadFile(imagesfolder, '/data/images/merchant_shop.png', true)
     .then(function (response) {
         console.log('Upload Response', response)
     })
