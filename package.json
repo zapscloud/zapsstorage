@@ -27,7 +27,8 @@
     "file-type": "^12.1.0",
     "form-data": "^2.5.0",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "debug": "^4.1.1"
   },
   "directories": {
     "lib": "lib"
