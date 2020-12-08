@@ -4,7 +4,6 @@ _Zapscloud Storage API Client_
 **Initialize Library with config values**
     
     var zapsstorage = new ZapsStorage({
-        url: 'https://api.zapscloud.com',
         app: 'appname',
         authkey: ' ',
         authsecret: ' '
